@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph"
+    app:startDestination="@id/articlesListFragment">
+
+    <fragment
+        android:id="@+id/articlesListFragment"
+        android:name="com.colegium.newsapp.newsapp.fragments.ArticlesListFragment"
+        android:label="HNews App by Colegium" >
+        <action
+            android:id="@+id/action_articlesListFragment_to_webArticleFragment"
+            app:destination="@id/webArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webArticleFragment"
+        android:name="com.colegium.newsapp.newsapp.fragments.WebArticleFragment"
+        android:label="Articulo Web" />
+        <argument
+            android:name="idPost"
+            app:argType="string" />
+</navigation>
