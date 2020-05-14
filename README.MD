@@ -22,7 +22,7 @@ o usando Android Studio click en el botón run eligiendo como un destino uno de 
 
 - Los UseCases están simplificados por practicidad y toman JavaRx de forma transversal. Si hubiera alguna lógica de negocio compleja, estos tomarían el stream de Observables y modificarían los datos que proviene del repositorio. Pero, dependiendo del caso particular, puede ser útil que los UseCases sean reactivos también. 
 
-- La lógica de cambio de hilo se abstrae usando JavaRx y los viewmodels usan el ciclo de suscripción para mapear los estados posibles (LOADING, ÉXITO, ERROR) y “postearlos” a las vistas. Luego se desase de  las suscripciones usando un compositeDisposable cuando el ciclo de vida del fragmento muere.
+- La lógica de cambio de hilo se abstrae usando JavaRx y los viewmodels usan el ciclo de suscripción para mapear los estados posibles (LOADING, ÉXITO, ERROR) y “postearlos” a las vistas. Luego se deshace de  las suscripciones usando un compositeDisposable cuando el ciclo de vida del fragmento muere.
 
 - La aplicación carga los primeros 20 elementos y luego puede llegar hasta la pagina 10 paginando cuando se realiza scroll down (lazy load). Carga datos (todos, incluyendo los que no tienen url) durante el inicio del app y almacena en una cache los datos ara ser consultada sin conexion.
 
