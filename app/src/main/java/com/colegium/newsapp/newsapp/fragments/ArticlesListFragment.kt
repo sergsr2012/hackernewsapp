@@ -73,7 +73,6 @@ class ArticlesListFragment() : Fragment() {
                             }
                             "reload" -> {
                                 togleProgressDialog(false)
-                                articlesPagedListAdapter?.notifyItemInserted(0)
                             }
                         }
                     }
