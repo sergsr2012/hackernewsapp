@@ -54,7 +54,7 @@ class ArticlesPagedListAdapter() :  PagedListAdapter<Article, RecyclerView.ViewH
         fun bind(article: Article) {
             bundleToNavigateDetails.putString(KEY_EXTRA_URL_ARTICLE, article.url)
             txtRowTitle.text =  article.title
-            txtRowContent.text = "xx="+article.id+"=fecha: "+ article.created_at + "au: " + article.author + "-" +article.page + " " + article.url
+            txtRowContent.text = "autor: ${article.author}"
             setNavigationListener()
         }
 
